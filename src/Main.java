@@ -37,9 +37,9 @@ Ravenclaw[]ravenclaws={
         new Ravenclaw("Падма","Патил",55,80,80,90,60,65),
         new Ravenclaw("Маркус","Белби",45,55,90,75,80,50),
 };
-PrintService printService = new PrintService();
-printService.print(students);
-printService.print(gryffindors);
+      PrintService printService = new PrintService();
+   printService.print(students);
+       printService.print(gryffindors);
         printService.print(slytherins);
         printService.print(hufflepuffs);
         printService.print(ravenclaws);

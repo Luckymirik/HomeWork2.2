@@ -44,4 +44,35 @@ public class Ravenclaw extends Hogwarts {
     public void setCreation(int creation) {
         this.creation = creation;
     }
+    public void print(Ravenclaw[] ravenclaws){
+        System.out.println("Количество учеников в Когтевране "+ravenclaws.length);
+        for (int i = 0; i < ravenclaws.length; i++) {
+            Ravenclaw ravenclaw = ravenclaws[i];
+            System.out.println("Имя "+ravenclaw.getName()+"; Фамилия "+ravenclaw.getSurname()
+                    +"; Магическая сила "+ravenclaw.getPowerOfMagic()+"; Расстояние трансгрессии "+ravenclaw.getTransgression()+
+                    "; Ум "+ ravenclaw.getIntellect()+
+                    "; Мудрость "+ ravenclaw.getSapience()+"; Остроумие "+ravenclaw.getWittiness()
+                    +"; Творчество "+ravenclaw.getCreation());
+
+        }
+    }
+        public void compare1(Ravenclaw[] ravenclaws,String name1,String name2) {
+        int a=0;
+        int b = 0;
+        for (int i = 0; i < ravenclaws.length; i++) {
+            Ravenclaw ravenclaw = ravenclaws[i];
+            if (name1.equals(ravenclaw.getName())){
+                a= ravenclaw.getIntellect()+ ravenclaw.getSapience()+ ravenclaw.getWittiness()+ ravenclaw.getCreation();
+            }
+            if (name2.equals(ravenclaw.getName())){
+                b=ravenclaw.getIntellect()+ ravenclaw.getSapience()+ ravenclaw.getWittiness()+ ravenclaw.getCreation();
+            }
+        }
+        if (a>b){
+            System.out.println(name1+" лучше Когтевранец, чем " + name2);
+        }
+        if (b>a){
+            System.out.println(name2+" лучше Когтевранец, чем " + name1);
+        }
+    }
 }

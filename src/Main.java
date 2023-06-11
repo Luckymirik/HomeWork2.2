@@ -37,17 +37,17 @@ Ravenclaw[]ravenclaws={
         new Ravenclaw("Падма","Патил",55,80,80,90,60,65),
         new Ravenclaw("Маркус","Белби",45,55,90,75,80,50),
 };
-      PrintService printService = new PrintService();
-   printService.print(students);
-       printService.print(gryffindors);
-        printService.print(slytherins);
-        printService.print(hufflepuffs);
-        printService.print(ravenclaws);
-        printService.compare(gryffindors,"Гермиона","Рон");
-        printService.compare(slytherins,"Грегори","Драко");
-        printService.compare(hufflepuffs,"Седрик","Захария");
-        printService.compare(ravenclaws,"Маркус","Чжоу");
-        printService.compare(students,"Падма","Гарри");
+
+ students[0].print(students);
+slytherins[0].print(slytherins);
+        hufflepuffs[0].print(hufflepuffs);
+        ravenclaws[0].print( ravenclaws);
+        gryffindors[2].compare1(gryffindors[0]);
+
+   slytherins[0].compare1(slytherins,"Грегори","Драко");
+   hufflepuffs[0].compare1(hufflepuffs,"Седрик","Захария");
+     ravenclaws[0].compare1(ravenclaws,"Маркус","Чжоу");
+        students[0].compare(students,"Падма","Гарри");
 
 
     }

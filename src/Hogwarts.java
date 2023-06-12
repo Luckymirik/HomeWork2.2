@@ -51,34 +51,25 @@ public class Hogwarts {
 
         }
     }
-    public  void compare(Hogwarts[] students, String name1, String name2) {
-        int a1=0;
-        int a2=0;
-        int b1 = 0;
-        int b2 =0;
-        for (int i = 0; i < students.length; i++) {
-            Hogwarts student = students[i];
-            if (name1.equals(student.getName())){
-                a1= student.getPowerOfMagic();
-                b1=student.getTransgression();
-            }
-            if (name2.equals(student.getName())){
-                a2= student.getPowerOfMagic();
-                b2=student.getTransgression();
 
-            }
-        }
+    public  void compare(Hogwarts students) {
+        int a1=getPowerOfMagic();
+        int a2=students.getPowerOfMagic();
+        int b1 = getTransgression();
+        int b2 =students.getTransgression();
+
+
         if (a1>a2){
-            System.out.println(name1+" обладает большей мощностью магии, чем " + name2);
+            System.out.println(getName()+" обладает большей мощностью магии, чем " +students.getName() );
         }
         if (a2>a1){
-            System.out.println(name2+" обладает большей мощностью магии, чем " + name1);
+            System.out.println(students.getName()+" обладает большей мощностью магии, чем " + getName());
         }
         if (b1>b2){
-            System.out.println(name1+" трансгрессирует дальше, чем " + name2);
+            System.out.println(getName()+" трансгрессирует дальше, чем " + students.getName());
         }
         if (b2>b1){
-            System.out.println(name2+" трансгрессирует дальше, чем " + name1);
+            System.out.println(students.getName()+" трансгрессирует дальше, чем " + getName());
         }
     }
 }

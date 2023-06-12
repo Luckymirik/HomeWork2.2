@@ -45,23 +45,18 @@ public class Hufflepuff extends Hogwarts{
 
         }
     }
-        public void compare1(Hufflepuff[] hufflepuffs,String name1,String name2) {
-        int a=0;
-        int b = 0;
-        for (int i = 0; i < hufflepuffs.length; i++) {
-            Hufflepuff hufflepuff = hufflepuffs[i];
-            if (name1.equals(hufflepuff.getName())){
-                a=hufflepuff.getIndustriousness()+hufflepuff.getLoyalty()+hufflepuff.getHonesty();
-            }
-            if (name2.equals(hufflepuff.getName())){
-                b=hufflepuff.getIndustriousness()+hufflepuff.getLoyalty()+hufflepuff.getHonesty();
-            }
-        }
+    public int superPower(){
+        return industriousness+loyalty+honesty;
+    }
+    public void compare1(Hufflepuff hufflepuff) {
+        int a=superPower();
+        int b = hufflepuff.superPower();
+
         if (a>b){
-            System.out.println(name1+" лучше Пуффендуец, чем " + name2);
+            System.out.println(getName()+" лучше Пуффендуец, чем " + hufflepuff.getName());
         }
         if (b>a){
-            System.out.println(name2+" лучше Пуффендуец, чем " + name1);
+            System.out.println(hufflepuff.getName()+" лучше Пуффендуец, чем " + getName());
         }
     }
 }

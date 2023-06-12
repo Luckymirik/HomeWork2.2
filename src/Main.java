@@ -44,10 +44,10 @@ slytherins[0].print(slytherins);
         ravenclaws[0].print( ravenclaws);
         gryffindors[2].compare1(gryffindors[0]);
 
-   slytherins[0].compare1(slytherins,"Грегори","Драко");
-   hufflepuffs[0].compare1(hufflepuffs,"Седрик","Захария");
-     ravenclaws[0].compare1(ravenclaws,"Маркус","Чжоу");
-        students[0].compare(students,"Падма","Гарри");
+   slytherins[0].compare1(slytherins[2]);
+   hufflepuffs[0].compare1(hufflepuffs[1]);
+     ravenclaws[1].compare1(ravenclaws[0]);
+        students[0].compare(students[3]);
 
 
     }

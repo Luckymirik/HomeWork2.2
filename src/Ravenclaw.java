@@ -56,23 +56,18 @@ public class Ravenclaw extends Hogwarts {
 
         }
     }
-        public void compare1(Ravenclaw[] ravenclaws,String name1,String name2) {
-        int a=0;
-        int b = 0;
-        for (int i = 0; i < ravenclaws.length; i++) {
-            Ravenclaw ravenclaw = ravenclaws[i];
-            if (name1.equals(ravenclaw.getName())){
-                a= ravenclaw.getIntellect()+ ravenclaw.getSapience()+ ravenclaw.getWittiness()+ ravenclaw.getCreation();
+    public int superPower(){
+        return intellect+sapience+wittiness+creation;
+    }
+        public void compare1(Ravenclaw ravenclaw) {
+        int a=superPower();
+        int b = ravenclaw.superPower();
+
+            if (a>b){
+                System.out.println(getName()+" лучше Когтевранец, чем " + ravenclaw.getName());
             }
-            if (name2.equals(ravenclaw.getName())){
-                b=ravenclaw.getIntellect()+ ravenclaw.getSapience()+ ravenclaw.getWittiness()+ ravenclaw.getCreation();
+            if (b>a){
+                System.out.println(ravenclaw.getName()+" лучше Когтевранец, чем " + getName());
             }
-        }
-        if (a>b){
-            System.out.println(name1+" лучше Когтевранец, чем " + name2);
-        }
-        if (b>a){
-            System.out.println(name2+" лучше Когтевранец, чем " + name1);
-        }
     }
 }

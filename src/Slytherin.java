@@ -66,25 +66,17 @@ public class Slytherin extends Hogwarts {
 
         }
     }
-    public void compare1(Slytherin[] slytherins,String name1,String name2) {
-        int a=0;
-        int b = 0;
-        for (int i = 0; i < slytherins.length; i++) {
-            Slytherin slytherin = slytherins[i];
-            if (name1.equals(slytherin.getName())){
-                a=slytherin.getCunning()+slytherin.getDetermination()+slytherin.getAmbition()+
-                        slytherin.getResourcefulness()+slytherin.getLustForPower();
-            }
-            if (name2.equals(slytherin.getName())){
-                b=slytherin.getCunning()+slytherin.getDetermination()+slytherin.getAmbition()+
-                        slytherin.getResourcefulness()+slytherin.getLustForPower();
-            }
-        }
+    public int superPower(){
+        return cunning + determination+ ambition +resourcefulness+lustForPower;
+    }
+    public  void compare1(Slytherin slytherin) {
+        int a=superPower();
+        int b = slytherin.superPower();
         if (a>b){
-            System.out.println(name1+" лучше Слизеринец, чем " + name2);
+            System.out.println(getName()+" лучше Слизеринец, чем " + slytherin.getName());
         }
         if (b>a){
-            System.out.println(name2+" лучше Слизеринец, чем " + name1);
+            System.out.println(slytherin.getName()+" лучше Слизеринец, чем " + getName());
         }
     }
 }
